@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/content_sp.css">
+    <title>form</title>
+</head>
+
+
+<body>
+    <section class="u-mT5">
+        <h1 class="index_ttl u-bold u-lineHS u-txtC"><span class="u-family1">Contact</span><br><span
+                  class="u-fosM u-boldN">お問い合わせ</span></h1>
+        <p class="contact_cont u-mT3 u-lineHL u-fosM u-w75 u-mWA">
+            当店へのご相談・ご質問等ありましたらお気軽にお問い合わせください。<br>
+            電話やメールにてお問い合わせを承っております。メールでのお問い合わせはお返事までにお時間をいただく場合がございます。お急ぎの場合はお電話にて直接お問い合わせください。
+        </p>
+        <table class="contact_question u-w80 u-mWA u-txtL u-fosM u-mT3">
+            <tr>
+                <th>営業時間</th>
+                <td>10:00-17:00</td>
+            </tr>
+            <tr>
+                <th>定休日</th>
+                <td>火曜日</td>
+            </tr>
+            <tr>
+                <th>TEL / FAX</th>
+                <td>052-990-3221</td>
+            </tr>
+        </table>
+        <section>
+            <h2 class="form_ttl">お問い合わせフォーム</h2>
+            <form action=" " method="POST" netlify class="u-mT4 u-w90 u-mWA">
+                <div>
+                    <label for="name" class="u-fosM u-bold u-ls2">お名前<span class="form_clr">※</span></label><br>
+                    <div class="u-flxBet">
+                        <input type="text" id="name_sei" name="name_sei" value="" placeholder="姓" required class="u-pTB1">
+                        <input type="text" id="name_mei" name="name_mei" value="" placeholder="名" required class="u-pTB1">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="name" class="u-fosM u-bold u-ls2">フリガナ<span class="form_clr">※</span></label><br>
+                    <div class="u-flxBet">
+                        <input type="text" id="furigana_sei" name="furigana_sei" value="" placeholder="セイ" required class="u-pTB1">
+                        <input type="text" id="furigana_mei" name="furigana_mei" value="" placeholder="メイ" required class="u-pTB1">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email" class="u-fosM u-bold u-ls2">メールアドレス<span class="form_clr">※</span></label><br>
+                    <input type="email" id="email" name="email" class="u-w100" placeholder="メールアドレス" required>
+                </div>
+
+                <div>
+                    <label for="tel" class="u-fosM u-bold u-ls2">電話番号<span class="form_clr">※</span><span class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
+                    <textarea id="tel" name="tel" placeholder="090-1234-5678" required></textarea>
+                </div>
+
+                <div>
+                    <label for="postcode" class="u-fosM u-bold u-ls2">郵便番号<span class="form_clr">※</span><span class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
+                    <textarea id="postcode" name="postcode" placeholder="123-4567" required></textarea>
+                </div>
+
+                <div>
+                    <label for="address" class="u-fosM u-bold u-ls2">ご住所</label><br>
+                    <textarea id="address" name="address" placeholder="住所"></textarea>
+                </div>
+
+                <div class="u-mT6">
+                    <p class="u-fosL u-bold">お問い合わせ項目<span class="form_clr">※</span></p>
+                    <label for="event1" class="u-fosM" class="radio_wtap u-mT15">
+                        <input type="radio" id="event1" name="event" value="前撮り" required>
+                        <span class="custom_radioBtn"></span>
+                        前撮り
+                    </label><br>
+                    <label for="event2" class="u-fosM" class="radio_wtap u-mT15">
+                        <input type="radio" id="event2" name="event" value="撮影について">
+                        <span class="custom_radioBtn"></span>
+                        撮影について
+                    </label><br>
+                    <label for="event3" class="u-fosM" class="radio_wtap u-mT15">
+                        <input type="radio" id="event3" name="event" value="オプションについて">
+                        <span class="custom_radioBtn"></span>
+                        オプションについて
+                    </label><br>
+                    <label for="event4" class="u-fosM" class="radio_wtap u-mT15">
+                        <input type="radio" id="event4" name="event" value="グッズ・アルバム作成について">
+                        <span class="custom_radioBtn"></span>
+                        グッズ・アルバム作成について
+                    </label><br>
+                    <label for="event5" class="u-fosM" class="radio_wtap u-mT15">
+                        <input type="radio" id="event5" name="event" value="その他お問い合わせ">
+                        <span class="custom_radioBtn"></span>
+                        その他お問い合わせ
+                    </label>
+                </div>
+
+                <div class="u-mT5">
+                    <p class="u-fosL u-bold">撮影の目的</p>
+                    <label for="purpose1" class="u-fosM" class="radio_wrap">
+                        <input type="radio" id="purpose1" name="purpose" value="撮影イベント参加" required>
+                        <span class="custom_radioBtn"></span>
+                        撮影イベント参加申し込み
+                    </label><br>
+                    <label for="purpose2" class="u-fosM" class="radio_wrap">
+                        <input type="radio" id="purpose2" name="purpose" value="成人式">
+                        <span class="custom_radioBtn"></span>
+                        成人式
+                    </label><br>
+                    <label for="purpose3" class="u-fosM" class="radio_wrap">
+                        <input type="radio" id="purpose3" name="purpose" value="ファミリー">
+                        <span class="custom_radioBtn"></span>
+                        ファミリー
+                    </label><br>
+                    <label for="purpose4" class="u-fosM" class="radio_wrap">
+                        <input type="radio" id="purpose4" name="purpose" value="その他（お問い合わせ内容欄にご入力ください）">
+                        <span class="custom_radioBtn"></span>
+                        その他（お問い合わせ内容欄にご入力ください）
+                    </label>
+                </div>
+
+                <div class="u-mT5">
+                    <label for="photospot" class="u-fosM u-bold">希望撮影場所</label>
+                    <textarea id="photospot" name="photospot" placeholder="住所" required></textarea>
+                </div>
+
+                <div class="u-mT2">
+                    <p class="u-fosM u-bold">撮影希望時期</p>
+                    <select id="year" name="year">
+                        <!-- 年の選択肢 -->
+                        <option value="" disabled selected>2025年</option>
+                        <script>
+                            for (let year = 2024; year <= 2100; year++) {
+                                document.write(`<option value="${year}">${year}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="month" name="month">
+                        <!-- 月の選択肢 -->
+                        <option value="" disabled selected>12月</option>
+                        <script>
+                            for (let month = 1; month <= 12; month++) {
+                                document.write(`<option value="${month}">${month}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="day" name="day">
+                        <!-- 日の選択肢 -->
+                        <option value="" disabled selected>30日</option>
+                        <script>
+                            for (let day = 1; day <= 31; day++) {
+                                document.write(`<option value="${day}">${day}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div class="u-mT4">
+                    <label for="question" class="u-fosL u-bold">お問い合わせ</label>
+                    <textarea id="question" name="question"></textarea>
+                </div>
+                <button type="submit">送信する</button>
+            </form>
+            <p>当サービスの<a href="">利用規約</a>及び<a href="">プライバシーポリシー</a>にご同意の上、送信してください。</p>
+            <a href="" class="u-blk u-w100"><img src="images/line.png" alt="" class="u-w100"></a>
+        </section>
+
+
+    </section>
+</body>
+
+</html>
