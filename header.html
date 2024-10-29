@@ -1,1 +1,70 @@
-<p>あああaaa</p>
+<nav>
+    <a href="">
+        <figure class="nav_logo u-w20"><img src="images/logo_nav.svg" alt="no-to"></figure>
+    </a>
+    <div class="nav_openbtn js-nav_open">
+        <p class="u-family1">menu</p>
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav_content js-nav_content header">
+        <p class="nav_content__item js-nav_accordion u-family1 js-nav_accordion icon_down">撮影プラン</p>
+        <div class="nav_accordion__cont js-nav_accordion__cont">
+            <a href="" class="nav_acc_content__item u-family1">ニューボーン</a href="">
+            <a href="" class="nav_acc_content__item u-family1">ウェディング</a href="">
+            <a href="" class="nav_acc_content__item u-family1">キッズ</a href="">
+            <a href="" class="nav_acc_content__item u-family1">エンゲージメント</a href="">
+            <a href="" class="nav_acc_content__item u-family1">お宮参り</a href="">
+            <a href="" class="nav_acc_content__item u-family1">七五三</a href="">
+            <a href="" class="nav_acc_content__item u-family1">シニア </a href="">
+            <a href="" class="nav_acc_content__item u-family1">プロフィール</a href="">
+            <a href="" class="nav_acc_content__item u-family1">イベント</a href="">
+        </div>
+        <a href="" class="nav_content__item u-family1 u-blk">グッズ・アルバム作成</a>
+        <a href="" class="nav_content__item u-family1 u-blk">スタジオ</a>
+        <a href="" class="nav_content__item u-family1 u-blk">フォトギャラリー</a>
+        <a href="" class="nav_content__item u-family1 u-blk">お問い合わせ</a>
+    </div>
+</nav>
+
+<script>
+    $(function () {
+        $(".js-nav_content.header").hide();
+
+        $(".js-nav_open").click(function () {
+            const $navContent = $('.header.js-nav_content');
+            const isActive = $navContent.hasClass('is-active');
+
+            $(this).toggleClass('is-active');
+
+            if (isActive) {
+                $navContent.removeClass('is-active');
+                setTimeout(() => {
+                    $navContent.css('opacity', '0');
+                    setTimeout(() => {
+                        $navContent.hide();
+                    }, 400);
+                }, 10);
+            } else {
+                $navContent.show();
+                setTimeout(() => {
+                    $navContent.css('opacity', '1');
+                    $navContent.addClass('is-active');
+                }, 20);
+            }
+        });
+    });
+
+    $(function () {
+        $('.header .js-nav_accordion__cont').hide();
+        $('.header .js-nav_accordion').click(function () {
+            $(this).next('.header .js-nav_accordion__cont').slideToggle();
+            $(this).toggleClass('is-active');
+        });
+    })
+
+
+
+
+
+</script>
