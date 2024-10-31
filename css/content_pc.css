@@ -266,6 +266,11 @@
     }
 
     /* カスタマイズcss */
+    .index_wrap{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
     .top_txt{
         text-align: center;
     }
