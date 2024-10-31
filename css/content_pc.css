@@ -261,6 +261,14 @@
     .u-blk {
         display: block;
     }
+    
+    .u-none--pc{
+        display: none;
+    }
+    
+    .u-none--sp{
+        display: block;
+    }
 
     /* position */
     .u-posRel {
@@ -527,6 +535,7 @@
         border: 2px solid #BFBFBF;
         padding: 15px 10px;
         letter-spacing: 1.5px;
+        width: 85%;
     }
 
     .albMade_select__txt {

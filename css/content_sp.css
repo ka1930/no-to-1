@@ -242,6 +242,14 @@
         display: block;
     }
 
+    .u-none--pc{
+        display: block;
+    }
+    
+    .u-none--sp{
+        display: none;
+    }
+
     /* position */
     .u-posRel {
         position: relative;
@@ -388,9 +396,15 @@
         left: 48%;
     }
 
+    .cate_photogallery__item{
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
 
     .cate_photogallery__item:nth-of-type(n+2){
-        margin-top: 20px;
+        margin-top: 20px 0 0 0;
     }
 
     .location {
@@ -491,6 +505,7 @@
         border: 2px solid #BFBFBF;
         padding: 15px 10px;
         letter-spacing: 1.5px;
+        width: 80%;
     }
 
     .albMade_select__txt {
