@@ -117,6 +117,10 @@
         margin-left: 0 !important;
     }
 
+    .u-mB5{
+        margin-bottom: 50px;
+    }
+
     /* padding */
     .u-pT1 {
         padding-top: 10px;
@@ -167,7 +171,8 @@
         width: 50%;
     }
 
-    .u-w60 {
+    .u-w60,
+    .u-w60-90 {
         width: 60%;
     }
 
