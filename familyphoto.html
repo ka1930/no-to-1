@@ -11,12 +11,14 @@
 
 
 <body>
+    <div id="header"></div>
     <section>
         <h1 class="u-fos3L u-txtC u-bold u-ls5 index_ttl u-w90 u-mWA"><span class="u-family1">family photo</span><br><span class="u-fosM u-boldN">ファミリー</span></h1>
-        <img src="images/family_mv.jpg" alt="" class="u-w100">
+        <img src="images/family_mv.jpg" alt="" class="u-w100 u-none--pc">
+        <img src="images/family_mv_pc.jpg" alt="" class="u-w100 u-none--sp">
         <div class="u-w90 u-mWA">
             <section class="u-mT3">
-                <h2 class="u-fos16 u-txtC u-bold u-lineHL u-ls5">お子様の成長記録や<br>家族の幸せの記録のために</h2>
+                <h2 class="u-fos16--sp u-txtC u-bold u-lineHL u-ls5">お子様の成長記録や<br>家族の幸せの記録のために</h2>
                 <p class="u-fosM u-mT3 u-lineHL u-txtC u-ls3">
                     なかなかご自身では家族全員でのお写真は<br>
                     撮影できないですよね。<br>
@@ -175,6 +177,16 @@
             <a href="" class="u-blk u-w100"><img src="images/line.png" alt="" class="u-w100"></a>
         </section>
     </section>
+    <div id="footer"></div>
+    <!-- jQueryをCDNから読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>

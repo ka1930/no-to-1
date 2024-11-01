@@ -49,7 +49,7 @@
         font-size: 11px !important;
     }
 
-    .u-fos16 {
+    .u-fos16--sp {
         font-size: 16px;
     }
 
@@ -305,7 +305,7 @@
     }
 
     .top_bgimg.album_made__bgimg {
-        top: 160%;
+        top: 90%;
         right: 0;
 
     }
