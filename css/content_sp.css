@@ -12,7 +12,8 @@
         margin: 0 !important;
         font-family: YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
         overflow-x: hidden;
-        padding-top: 30px;
+        padding-top: 60px;
+        overflow-x: hidden;
     }
 
     a {
