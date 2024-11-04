@@ -666,8 +666,9 @@
         height: 50px;
         padding: 1px 0;
         position: fixed;
-        top: 0;
-        width: 1000px;
+        top: 0;        
+        max-width: 1000px;
+        min-width: 800px;
         margin-right: auto;
         margin-left: auto;
         z-index: 100;
