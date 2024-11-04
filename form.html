@@ -11,6 +11,7 @@
 
 
 <body>
+<div id="header"></div>
     <section class="u-mT5">
         <h1 class="index_ttl u-bold u-lineHS u-txtC"><span class="u-family1">Contact</span><br><span
                   class="u-fosM u-boldN">お問い合わせ</span></h1>
@@ -168,9 +169,16 @@
             <p class="u-mT3 u-fosM">当サービスの<a href="">利用規約</a>及び<a href="">プライバシーポリシー</a>にご同意の上、送信してください。</p>
             <a href="" class="u-blk u-w50-80 u-mWA u-mT3"><img src="images/line.png" alt="" class="u-w100"></a>
         </section>
-
-
     </section>
+    <div id="footer"></div>
+        <!-- jQueryをCDNから読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>
