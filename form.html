@@ -33,9 +33,11 @@
                 <td>052-990-3221</td>
             </tr>
         </table>
-        <section class="form_wrap">
+        <section>
             <h2 class="form_ttl">お問い合わせフォーム</h2>
-            <form action=" " method="POST" netlify class="u-mT4 u-w80-90 u-mWA" netlify>
+
+            <form method="POST" data-netlify="true" class="u-mT4 u-w90 u-mWA" name="contact" action="/thanks">
+                <input type="hidden" name="contact" value="contact" />
                 <div class="u-mT2">
                     <label for="name" class="u-fosM u-bold u-ls2">お名前<span class="form_clr">※</span></label><br>
                     <div class="u-flxBet">
@@ -130,55 +132,86 @@
                     <textarea id="photospot" name="photospot" placeholder="住所" required></textarea>
                 </div>
 
+
                 <div class="u-mT2">
                     <p class="u-fosM u-bold">撮影希望時期</p>
-                    <select id="year" name="year">
-                        <!-- 年の選択肢 -->
-                        <option value="" disabled selected>2025年</option>
-                        <script>
-                            for (let year = 2024; year <= 2100; year++) {
-                                document.write(`<option value="${year}">${year}</option>`);
-                            }
-                        </script>
+                    <select id="year" name="year" required>
+                        <option value="年" disabled selected>年</option>
+           
                     </select>
-                    <select id="month" name="month">
-                        <!-- 月の選択肢 -->
-                        <option value="" disabled selected>12月</option>
-                        <script>
-                            for (let month = 1; month <= 12; month++) {
-                                document.write(`<option value="${month}">${month}</option>`);
-                            }
-                        </script>
+                    <select id="month" name="month" required>
+                        <option value="月" disabled selected>月</option>
+                 
                     </select>
-                    <select id="day" name="day">
-                        <!-- 日の選択肢 -->
-                        <option value="" disabled selected>30日</option>
-                        <script>
-                            for (let day = 1; day <= 31; day++) {
-                                document.write(`<option value="${day}">${day}</option>`);
-                            }
-                        </script>
+                    <select id="day" name="day" required>
+                        <option value="日" disabled selected>日</option>
                     </select>
                 </div>
+                <!-- <div class="u-mT2">
+                    <p class="u-fosM u-bold">撮影希望時期</p>
+                    <select id="year" name="year">
+                        <option value="" disabled selected>年</option>
+                    </select>
+                    <select id="month" name="month">
+                        <option value="" disabled selected>月</option>
+                    </select>
+                    <select id="day" name="day">
+                        <option value="" disabled selected>日</option>
+                    </select>
+                </div> -->
+
                 <div class="u-mT4">
                     <label for="question" class="u-fosL u-bold">お問い合わせ</label>
                     <textarea id="question" name="question"></textarea>
                 </div>
-                <button type="submit" class="contact_mail">送信する</button>
+                <button type="submit">送信する</button>
             </form>
+
+
             <p class="u-mT3 u-fosM u-w80 u-mWA">当サービスの<a href="">利用規約</a>及び<a href="">プライバシーポリシー</a>にご同意の上、送信してください。</p>
             <a href="" class="u-blk u-w50-80 u-mWA u-mT3"><img src="images/line.png" alt="" class="u-w100"></a>
         </section>
+
+
     </section>
-    <div id="footer"></div>
-        <!-- jQueryをCDNから読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSelect = document.getElementById('year');
+            const monthSelect = document.getElementById('month');
+            const daySelect = document.getElementById('day');
+    
+            // 年の選択肢を追加
+            for (let year = 2024; year <= 2100; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = `${year}年`;
+                yearSelect.appendChild(option);
+            }
+    
+            // 月の選択肢を追加
+            for (let month = 1; month <= 12; month++) {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = `${month}月`;
+                monthSelect.appendChild(option);
+            }
+    
+            // 日の選択肢を追加
+            for (let day = 1; day <= 31; day++) {
+                const option = document.createElement('option');
+                option.value = day;
+                option.textContent = `${day}日`;
+                daySelect.appendChild(option);
+            }
+        });
         $(function () {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
         });
     </script>
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
