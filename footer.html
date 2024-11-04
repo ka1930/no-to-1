@@ -1,5 +1,5 @@
 <div class="nav_content footer u-mT5">
-    <p class="nav_content__item u-family1 icon_down">撮影プラン</p>
+    <p class="nav_content__item js-nav_accordion u-family1 js-nav_accordion icon_down">撮影プラン</p>
     <div class="nav_accordion__cont js-nav_accordion__cont">
         <a href="#" class="nav_acc_content__item u-family1">ニューボーン</a>
         <a href="#" class="nav_acc_content__item u-family1">ウェディング</a>
@@ -16,3 +16,13 @@
     <a href="#" class="nav_content__item u-family1 u-blk">フォトギャラリー</a>
     <a href="#" class="nav_content__item u-family1 u-blk">お問い合わせ</a>
 </div>
+
+<script>
+    $(function () {
+        $('.header .js-nav_accordion__cont').hide();
+        $('.header .js-nav_accordion').click(function () {
+            $(this).next('.footer .js-nav_accordion__cont').slideToggle();
+            $(this).toggleClass('is-active');
+        });
+    });
+</script>
