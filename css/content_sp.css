@@ -8,6 +8,10 @@
             url('../fonts/LINESeedJP_OTF_Rg.woff') format('truetype');
     }
 
+    html{
+        overflow-x: hidden;
+    }
+
     body {
         margin: 0 !important;
         font-family: YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
