@@ -560,6 +560,11 @@
         color: #CF8D7D;
     }
 
+    .form_wrap{
+        width: 800px;
+        margin: 0 auto;
+    }
+
     /* テキストエリアのスタイル */
     textarea#question {
         width: 100%;
