@@ -557,7 +557,7 @@
 
     textarea {
         width: 100%!important;
-        padding: 5px 0;
+        padding: 5px 0 5px 5px;
     }
 
     input#name_sei,
@@ -565,11 +565,10 @@
     input#furigana_sei,
     input#furigana_mei {
         width: calc((100% - 30px) / 2) !important;
-        padding: 10px 0 0 5px;
     }
 
     input#email {
-        padding: 10px 0 0 5px;
+        padding: 10px 0 10px 5px;
     }
 
     select {
