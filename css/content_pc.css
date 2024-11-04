@@ -786,7 +786,20 @@
         content: '';
         position: absolute;
         top: 50%;
-        left: 29%;
+        left: 12%;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; 
+        border-bottom: 5px solid transparent;
+        transform: translateY(-50%);
+        transition: transform 0.3s; 
+    }
+
+    .footer .icon_down::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 12%;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #fff; 
