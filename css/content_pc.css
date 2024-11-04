@@ -667,7 +667,7 @@
         padding: 1px 0;
         position: fixed;
         top: 0;        
-        max-width: 1000px;
+        width: 1000px;
         min-width: 800px;
         margin-right: auto;
         margin-left: auto;
@@ -800,7 +800,7 @@
         content: '';
         position: absolute;
         top: 50%;
-        left: 12%;
+        left: 14%;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #fff; 
