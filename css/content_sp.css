@@ -185,6 +185,7 @@
     }
 
     .u-w80,
+    .u-w40-80,
     .u-w50-80 {
         width: 80%;
     }
@@ -551,7 +552,7 @@
     }
 
     textarea {
-        width: 100%;
+        width: 100%!important;
         padding: 5px 0;
     }
 
