@@ -11,10 +11,10 @@
 
 
 <body>
-<div id="header"></div>
+    <div id="header"></div>
     <section class="u-mT5">
         <h1 class="index_ttl u-bold u-lineHS u-txtC"><span class="u-family1">Contact</span><br><span
-                  class="u-fosM u-boldN">お問い合わせ</span></h1>
+                class="u-fosM u-boldN">お問い合わせ</span></h1>
         <p class="contact_cont u-mT3 u-lineHL u-fosM u-w75 u-mWA">
             当店へのご相談・ご質問等ありましたらお気軽にお問い合わせください。<br>
             電話やメールにてお問い合わせを承っております。メールでのお問い合わせはお返事までにお時間をいただく場合がございます。お急ぎの場合はお電話にて直接お問い合わせください。
@@ -41,16 +41,20 @@
                 <div class="u-mT2">
                     <label for="name" class="u-fosM u-bold u-ls2">お名前<span class="form_clr">※</span></label><br>
                     <div class="u-flxBet">
-                        <input type="text" id="name_sei" name="name_sei" value="" placeholder="姓" required class="u-pTB1">
-                        <input type="text" id="name_mei" name="name_mei" value="" placeholder="名" required class="u-pTB1">
+                        <input type="text" id="name_sei" name="name_sei" value="" placeholder="姓" required
+                            class="u-pTB1">
+                        <input type="text" id="name_mei" name="name_mei" value="" placeholder="名" required
+                            class="u-pTB1">
                     </div>
                 </div>
 
                 <div class="u-mT2">
                     <label for="name" class="u-fosM u-bold u-ls2">フリガナ<span class="form_clr">※</span></label><br>
                     <div class="u-flxBet">
-                        <input type="text" id="furigana_sei" name="furigana_sei" value="" placeholder="セイ" required class="u-pTB1">
-                        <input type="text" id="furigana_mei" name="furigana_mei" value="" placeholder="メイ" required class="u-pTB1">
+                        <input type="text" id="furigana_sei" name="furigana_sei" value="" placeholder="セイ" required
+                            class="u-pTB1">
+                        <input type="text" id="furigana_mei" name="furigana_mei" value="" placeholder="メイ" required
+                            class="u-pTB1">
                     </div>
                 </div>
 
@@ -60,12 +64,14 @@
                 </div>
 
                 <div class="u-mT2">
-                    <label for="tel" class="u-fosM u-bold u-ls2">電話番号<span class="form_clr">※</span><span class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
+                    <label for="tel" class="u-fosM u-bold u-ls2">電話番号<span class="form_clr">※</span><span
+                            class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
                     <textarea id="tel" name="tel" placeholder="090-1234-5678" required></textarea>
                 </div>
 
                 <div class="u-mT2">
-                    <label for="postcode" class="u-fosM u-bold u-ls2">郵便番号<span class="form_clr">※</span><span class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
+                    <label for="postcode" class="u-fosM u-bold u-ls2">郵便番号<span class="form_clr">※</span><span
+                            class="u-fosS form_clr">ハイフンを入れてご入力ください。</span></label><br>
                     <textarea id="postcode" name="postcode" placeholder="123-4567" required></textarea>
                 </div>
 
@@ -137,11 +143,11 @@
                     <p class="u-fosM u-bold">撮影希望時期</p>
                     <select id="year" name="year" required>
                         <option value="年" disabled selected>年</option>
-           
+
                     </select>
                     <select id="month" name="month" required>
                         <option value="月" disabled selected>月</option>
-                 
+
                     </select>
                     <select id="day" name="day" required>
                         <option value="日" disabled selected>日</option>
@@ -171,16 +177,16 @@
             <p class="u-mT3 u-fosM u-w80 u-mWA">当サービスの<a href="">利用規約</a>及び<a href="">プライバシーポリシー</a>にご同意の上、送信してください。</p>
             <a href="" class="u-blk u-w50-80 u-mWA u-mT3"><img src="images/line.png" alt="" class="u-w100"></a>
         </section>
-<div id="footer"></div>
+        <div id="footer"></div>
 
     </section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const yearSelect = document.getElementById('year');
             const monthSelect = document.getElementById('month');
             const daySelect = document.getElementById('day');
-    
+
             // 年の選択肢を追加
             for (let year = 2024; year <= 2100; year++) {
                 const option = document.createElement('option');
@@ -188,7 +194,7 @@
                 option.textContent = `${year}年`;
                 yearSelect.appendChild(option);
             }
-    
+
             // 月の選択肢を追加
             for (let month = 1; month <= 12; month++) {
                 const option = document.createElement('option');
@@ -196,7 +202,7 @@
                 option.textContent = `${month}月`;
                 monthSelect.appendChild(option);
             }
-    
+
             // 日の選択肢を追加
             for (let day = 1; day <= 31; day++) {
                 const option = document.createElement('option');
@@ -210,7 +216,6 @@
             $("#footer").load("footer.html");
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
