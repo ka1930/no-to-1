@@ -208,6 +208,10 @@
     }
 
     /* line-height */
+    .u-lineH2S {
+        line-height: 1;
+    }
+
     .u-lineHS {
         line-height: 1.2;
     }
