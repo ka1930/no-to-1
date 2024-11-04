@@ -564,7 +564,7 @@
     input#name_mei,
     input#furigana_sei,
     input#furigana_mei {
-        width: calc((100% - 25px) / 2) !important;
+        width: calc((100% - 30px) / 2) !important;
     }
 
     input#email {
