@@ -755,6 +755,13 @@
         width: 30%;
     }
 
+    .footer_bottom{
+        background-color: #fff;
+        padding: 5px 0;
+        font-size: 12px;
+        text-align: center;
+    }
+
     .nav_content.header,
     .nav_content.footer{
         transition: opacity 0.4s ease;
