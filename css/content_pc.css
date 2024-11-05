@@ -862,6 +862,8 @@
         flex-wrap: wrap !important;
         -webkit-justify-content: space-between !important;
         justify-content: space-between !important;
+        width: 70%;
+        margin: 50px auto 0;
     }
 
     .type_of_albums__items{
