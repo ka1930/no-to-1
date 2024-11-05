@@ -31,7 +31,8 @@
     $(function () {
         $(".js-nav_content.header").hide();
 
-        $(".js-nav_open").click(function () {
+        $(".js-nav_open").click(function (event) {
+            event.stopPropagation();
             const $navContent = $('.header.js-nav_content');
             const isActive = $navContent.hasClass('is-active');
 
@@ -51,6 +52,20 @@
                     $navContent.css('opacity', '1');
                     $navContent.addClass('is-active');
                 }, 20);
+            }
+        });
+
+        $(document).click(function (event) {
+            const $navContent = $('.header.js-nav_content');
+            if ($navContent.hasClass('is-active') && !$(event.target).closest('.js-nav_open, .js-nav_content').length) {
+                $('.js-nav_open').removeClass('is-active');
+                $navContent.removeClass('is-active');
+                setTimeout(() => {
+                    $navContent.css('opacity', '0');
+                    setTimeout(() => {
+                        $navContent.hide();
+                    }, 400);
+                }, 10);
             }
         });
     });
