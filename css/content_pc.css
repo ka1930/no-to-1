@@ -341,7 +341,7 @@
     }
 
     .top_bgimg.album_made__bgimg {
-        top: 160%;
+        top: 90%;
         right: 12%;
 
     }
@@ -883,5 +883,6 @@
 
     .photo_goods_creation__items{
         width: calc((100% - 10px) / 2);
+        margin-top: 30px;
     }
 }
