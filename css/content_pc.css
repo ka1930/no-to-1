@@ -778,7 +778,7 @@
         opacity: 1;
         pointer-events: auto;
         background-color: #41587A;
-        height: 620px;
+        padding-bottom: 550px;
     }
 
     .header .nav_content__item {
