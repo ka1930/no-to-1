@@ -38,9 +38,15 @@
             $(this).toggleClass('is-active');
 
             if (isActive) {
-                $navContent.removeClass('is-active').css('padding-bottom', '0').fadeOut(400); // padding-bottomを0にしてフェードアウト
+                $navContent.removeClass('is-active').animate(
+                    { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
+                    400,
+                    function () {
+                        $navContent.hide(); // アニメーション完了後に非表示
+                    }
+                );
             } else {
-                $navContent.css('padding-bottom', '550px').fadeIn(400, function () { // padding-bottomを元に戻してフェードイン
+                $navContent.css('padding-bottom', '570px').fadeIn(400, function () { // フェードイン前にpadding-bottomを設定
                     $navContent.addClass('is-active').css('opacity', '1');
                 });
             }
@@ -53,11 +59,16 @@
             // メニューが開いていて、クリック対象がメニューまたはボタンの外側の場合
             if ($navContent.hasClass('is-active') && !$(e.target).closest($navContent).length && !$(e.target).closest($navOpenBtn).length) {
                 $('.js-nav_open').removeClass('is-active');
-                $navContent.removeClass('is-active').css('padding-bottom', '0').fadeOut(400); // padding-bottomを0にしてフェードアウト
+                $navContent.removeClass('is-active').animate(
+                    { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
+                    400,
+                    function () {
+                        $navContent.hide(); // アニメーション完了後に非表示
+                    }
+                );
             }
         });
     });
-
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
