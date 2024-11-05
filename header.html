@@ -52,16 +52,25 @@
             }
         });
 
-        // クリックイベント全てに対しての処理
+        // メニュー以外をクリックしたときの処理
         $(document).on('click touchend', function (event) {
-            // 表示したポップアップ以外の部分をクリックしたとき
-            if (!$(event.target).closest('.js-nav_open').length) {
-                const $navContent = $('.header.js-nav_content');
-                const isActive = $navContent.removeClass('is-active');
-                $('.header.js-nav_content').fadeOut();
+            const $navContent = $('.header.js-nav_content');
+            const $navOpenBtn = $('.js-nav_open');
+
+            // メニューが開いていて、クリック対象がメニューやボタンの外側の場合
+            if ($navContent.hasClass('is-active') && !$(event.target).closest($navContent).length && !$(event.target).closest($navOpenBtn).length) {
+                $navOpenBtn.removeClass('is-active'); // ハンバーガーメニューアイコンのクラスを削除
+                $navContent.removeClass('is-active').animate(
+                    { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
+                    400,
+                    function () {
+                        $navContent.hide(); // アニメーション完了後に非表示
+                    }
+                );
             }
         });
     });
+
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
