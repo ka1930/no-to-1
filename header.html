@@ -21,8 +21,8 @@
             <a href="eventphoto" class="nav_acc_content__item u-family1">イベント</a href="">
         </div>
         <a href="/albummade.html/" class="nav_content__item u-family1 u-blk">グッズ・アルバム作成</a>
-        <a href="/#studio" class="nav_content__item u-family1 u-blk">スタジオ</a>
-        <a href="/#photo_gallery" class="nav_content__item u-family1 u-blk">フォトギャラリー</a>
+        <a href="/#studio" class="nav_content__item u-family1 js-nav_content__item u-blk">スタジオ</a>
+        <a href="/#photo_gallery" class="nav_content__item u-family1 js-nav_content__item u-blk">フォトギャラリー</a>
         <a href="/form.html/" class="nav_content__item u-family1 u-blk">お問い合わせ</a>
     </div>
 </nav>
@@ -55,7 +55,7 @@
             }
         });
 
-        $('.nav_content__item').click(function () {
+        $('.js-nav_content__item').click(function () {
             const $navContent = $('.header.js-nav_content'); // スコープ内で再定義
             const $navOpenBtn = $('.js-nav_open');
 
