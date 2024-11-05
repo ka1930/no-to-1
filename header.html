@@ -8,56 +8,57 @@
     </div>
 
     <div class="nav_content js-nav_content header">
-        <p class="nav_content__item js-nav_accordion u-family1 js-nav_accordion icon_down">Plan</p>
+        <p class="nav_content__item js-nav_accordion u-family1 js-nav_accordion icon_down">撮影プラン</p>
         <div class="nav_accordion__cont js-nav_accordion__cont">
             <a href="/newbornphoto.html/" class="nav_acc_content__item u-family1">ニューボーン</a href="">
             <a href="/wedding.html/" class="nav_acc_content__item u-family1">ウェディング</a href="">
-            <a href="/kidsphoto.html/" class="nav_acc_content__item u-family1">キッズ</a href="">
-            <a href="/engagementphoto.html/" class="nav_acc_content__item u-family1">エンゲージメント</a href="">
-            <a href="/omiyamairiphoto.html/" class="nav_acc_content__item u-family1">お宮参り</a href="">
-            <a href="/shiti-go-sanphoto.html/" class="nav_acc_content__item u-family1">七五三</a href="">
+            <a href="kidsphoto.html/" class="nav_acc_content__item u-family1">キッズ</a href="">
+            <a href="engagementphoto.html" class="nav_acc_content__item u-family1">エンゲージメント</a href="">
+            <a href="omiyamairiphoto.html/" class="nav_acc_content__item u-family1">お宮参り</a href="">
+            <a href="shiti-go-sanphoto.html/" class="nav_acc_content__item u-family1">七五三</a href="">
             <a href="/seniorphoto.html/" class="nav_acc_content__item u-family1">シニア </a href="">
-            <a href="/profilephoto.html/" class="nav_acc_content__item u-family1">プロフィール</a href="">
-            <a href="/eventphoto.html/" class="nav_acc_content__item u-family1">イベント</a href="">
+            <a href="profilephoto.html/" class="nav_acc_content__item u-family1">プロフィール</a href="">
+            <a href="eventphoto" class="nav_acc_content__item u-family1">イベント</a href="">
         </div>
-        <a href="/albummade.html/" class="nav_content__item u-family1 u-blk">Goods album creation</a>
-        <a href="https://no-to.net/#studio" class="nav_content__item u-family1 u-blk">Studio</a>
-        <a href="https://no-to.net/#photo_gallery" class="nav_content__item u-family1 u-blk">Photo gallery</a>
-        <a href="/form.html/" class="nav_content__item u-family1 u-blk">Contact</a>
+        <a href="/albummade.html/" class="nav_content__item u-family1 u-blk">グッズ・アルバム作成</a>
+        <a href="/#studio/" class="nav_content__item u-family1 u-blk">スタジオ</a>
+        <a href="/#photo_gallery/" class="nav_content__item u-family1 u-blk">フォトギャラリー</a>
+        <a href="/form.html/" class="nav_content__item u-family1 u-blk">お問い合わせ</a>
     </div>
 </nav>
 
 <script>
     $(function () {
-    $(".js-nav_content.header").hide();
+        $(".js-nav_content.header").hide();
 
-    $(".js-nav_open").click(function () {
-        const $navContent = $('.header.js-nav_content');
-        const isActive = $navContent.hasClass('is-active');
+        $(".js-nav_open").click(function () {
+            const $navContent = $('.header.js-nav_content');
+            const isActive = $navContent.hasClass('is-active');
 
-        $(this).toggleClass('is-active');
+            $(this).toggleClass('is-active');
 
-        if (isActive) {
-            $navContent.removeClass('is-active');
-            setTimeout(() => {
-                $navContent.css('opacity', '0');
+            if (isActive) {
+                $navContent.removeClass('is-active');
                 setTimeout(() => {
-                    $navContent.hide();
-                }, 400);
-            }, 10);
-        } else {
-            $navContent.show();
-            setTimeout(() => {
-                $navContent.css('opacity', '1');
-                $navContent.addClass('is-active');
-            }, 20);
-        }
+                    $navContent.css('opacity', '0');
+                    setTimeout(() => {
+                        $navContent.hide();
+                    }, 400);
+                }, 10);
+            } else {
+                $navContent.show();
+                setTimeout(() => {
+                    $navContent.css('opacity', '1');
+                    $navContent.addClass('is-active');
+                }, 20);
+            }
+        });
     });
 
     $(document).on('click', function (e) {
         const $navContent = $('.header.js-nav_content'); // スコープ内で再定義
         const $navOpenBtn = $('.js-nav_open');
-        
+
         // メニューが開いていて、クリック対象がメニューまたはボタンの外側の場合
         if ($navContent.hasClass('is-active') && !$(e.target).closest($navContent).length && !$(e.target).closest($navOpenBtn).length) {
             $navContent.removeClass('is-active');
@@ -69,8 +70,6 @@
             }, 10);
         }
     });
-});
-
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
