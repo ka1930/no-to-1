@@ -55,8 +55,19 @@
             }
         });
 
-        $('.nav_content__item').click(function (){
-            $navContent.hide();
+        $('.nav_content__item').click(function () {
+            const $navContent = $('.header.js-nav_content'); // スコープ内で再定義
+            const $navOpenBtn = $('.js-nav_open');
+
+            // nav_content__item がクリックされたときの処理
+            $navOpenBtn.removeClass('is-active'); // ハンバーガーメニューアイコンのクラスを削除
+            $navContent.removeClass('is-active').animate(
+                { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
+                300,
+                function () {
+                    $navContent.hide(); // アニメーション完了後に非表示
+                }
+            );
         });
 
         // メニュー以外をクリックしたときの処理
@@ -77,8 +88,6 @@
             }
         });
     });
-
-
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
