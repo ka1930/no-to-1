@@ -40,13 +40,13 @@
             if (isActive) {
                 $navContent.removeClass('is-active').animate(
                     { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
-                    400,
+                    300,
                     function () {
                         $navContent.hide(); // アニメーション完了後に非表示
                     }
                 );
             } else {
-                $navContent.css('padding-bottom', '570px').fadeIn(400, function () { // フェードイン前にpadding-bottomを設定
+                $navContent.css('padding-bottom', '570px').fadeIn(300, function () { // フェードイン前にpadding-bottomを設定
                     $navContent.addClass('is-active').css('opacity', '1');
                 });
             }
@@ -62,7 +62,7 @@
                 $navOpenBtn.removeClass('is-active'); // ハンバーガーメニューアイコンのクラスを削除
                 $navContent.removeClass('is-active').animate(
                     { opacity: 0, paddingBottom: 0 }, // フェードアウトと同時にpadding-bottomを0に
-                    400,
+                    300,
                     function () {
                         $navContent.hide(); // アニメーション完了後に非表示
                     }
