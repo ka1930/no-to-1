@@ -32,43 +32,31 @@
         $(".js-nav_content.header").hide();
 
         $(".js-nav_open").click(function (event) {
-            event.stopPropagation();
+            event.stopPropagation(); // メニュー外クリックで閉じるために、イベントのバブリングを防止
             const $navContent = $('.header.js-nav_content');
             const isActive = $navContent.hasClass('is-active');
 
             $(this).toggleClass('is-active');
 
             if (isActive) {
-                $navContent.removeClass('is-active');
-                setTimeout(() => {
-                    $navContent.css('opacity', '0');
-                    setTimeout(() => {
-                        $navContent.hide();
-                    }, 400);
-                }, 10);
+                $navContent.removeClass('is-active').fadeOut(400); // フェードアウト
             } else {
-                $navContent.show();
-                setTimeout(() => {
-                    $navContent.css('opacity', '1');
+                $navContent.fadeIn(400, function () { // フェードイン
                     $navContent.addClass('is-active');
-                }, 20);
+                });
             }
         });
 
+        // メニュー外をクリックした場合にメニューを閉じる処理
         $(document).click(function (event) {
             const $navContent = $('.header.js-nav_content');
             if ($navContent.hasClass('is-active') && !$(event.target).closest('.js-nav_open, .js-nav_content').length) {
                 $('.js-nav_open').removeClass('is-active');
-                $navContent.removeClass('is-active');
-                setTimeout(() => {
-                    $navContent.css('opacity', '0');
-                    setTimeout(() => {
-                        $navContent.hide();
-                    }, 400);
-                }, 10);
+                $navContent.removeClass('is-active').fadeOut(400); // フェードアウト
             }
         });
     });
+
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
