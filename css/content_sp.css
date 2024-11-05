@@ -859,4 +859,9 @@
         border-left: solid 4px #FF8C71;
         padding: 5px 0 5px 10px;
     }
+
+    .privacy_adress{
+        background-color: #F5F1EE;
+        padding: 25px 10px;
+    }
 }
