@@ -56,6 +56,8 @@
         $(document).on('click touchend', function (event) {
             // 表示したポップアップ以外の部分をクリックしたとき
             if (!$(event.target).closest('.js-nav_open').length) {
+                const $navContent = $('.header.js-nav_content');
+                const isActive = $navContent.removeClass('is-active');
                 $('.header.js-nav_content').fadeOut();
             }
         });
