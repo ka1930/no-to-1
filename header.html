@@ -46,9 +46,12 @@
                     }
                 );
             } else {
-                $navContent.css('padding-bottom', '570px').fadeIn(300, function () { // フェードイン前にpadding-bottomを設定
-                    $navContent.addClass('is-active').css('opacity', '1');
-                });
+                $navContent.css({ paddingBottom: '570px', opacity: 0 }).show().animate(
+                    { opacity: 1 }, 200, // 短いフェードインで即座に表示
+                    function () {
+                        $navContent.addClass('is-active');
+                    }
+                );
             }
         });
 
@@ -70,6 +73,7 @@
             }
         });
     });
+
 
 
     $(function () {
