@@ -28,48 +28,36 @@
 </nav>
 
 <script>
-    $(function () {
-        $(".js-nav_content.header").hide();
+$(function () {
+    $(".js-nav_content.header").hide();
 
-        $(".js-nav_open").click(function () {
-            const $navContent = $('.header.js-nav_content');
-            const isActive = $navContent.hasClass('is-active');
+    $(".js-nav_open").click(function () {
+        const $navContent = $('.header.js-nav_content');
+        const isActive = $navContent.hasClass('is-active');
 
-            $(this).toggleClass('is-active');
+        $(this).toggleClass('is-active');
 
-            if (isActive) {
-                $navContent.removeClass('is-active');
-                setTimeout(() => {
-                    $navContent.css('opacity', '0');
-                    setTimeout(() => {
-                        $navContent.hide();
-                    }, 400);
-                }, 10);
-            } else {
-                $navContent.show();
-                setTimeout(() => {
-                    $navContent.css('opacity', '1');
-                    $navContent.addClass('is-active');
-                }, 20);
-            }
-        });
+        if (isActive) {
+            $navContent.removeClass('is-active').fadeOut(400); // フェードアウトを直接適用
+        } else {
+            $navContent.fadeIn(400, function() { // フェードインを直接適用
+                $navContent.addClass('is-active');
+            });
+        }
     });
 
     $(document).on('click', function (e) {
-        const $navContent = $('.header.js-nav_content'); // スコープ内で再定義
+        const $navContent = $('.header.js-nav_content');
         const $navOpenBtn = $('.js-nav_open');
 
         // メニューが開いていて、クリック対象がメニューまたはボタンの外側の場合
         if ($navContent.hasClass('is-active') && !$(e.target).closest($navContent).length && !$(e.target).closest($navOpenBtn).length) {
-            $navContent.removeClass('is-active');
-            setTimeout(() => {
-                $navContent.css('opacity', '0');
-                setTimeout(() => {
-                    $navContent.hide();
-                }, 400);
-            }, 10);
+            $('.js-nav_open').removeClass('is-active');
+            $navContent.removeClass('is-active').fadeOut(400); // フェードアウトを直接適用
         }
     });
+});
+
 
     $(function () {
         $('.header .js-nav_accordion__cont').hide();
