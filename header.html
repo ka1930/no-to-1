@@ -55,6 +55,10 @@
             }
         });
 
+        $('.nav_content__item').click(function (){
+            $navContent.removeClass('is-active');
+        });
+
         // メニュー以外をクリックしたときの処理
         $(document).on('click touchend', function (event) {
             const $navContent = $('.header.js-nav_content');
