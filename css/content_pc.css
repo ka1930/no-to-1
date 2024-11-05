@@ -870,7 +870,7 @@
         width: calc((100% - 10px) / 2);
     }
 
-    .photo_goods_creation__items{
+    .photo_goods_creation__wrap{
         display: -webkit-flex !important;
         display: flex !important;
         -webkit-flex-wrap: wrap !important;
