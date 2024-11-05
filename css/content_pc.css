@@ -869,4 +869,19 @@
     .type_of_albums__items{
         width: calc((100% - 10px) / 2);
     }
+
+    .photo_goods_creation__items{
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+        -webkit-justify-content: space-between !important;
+        justify-content: space-between !important;
+        width: 70%;
+        margin: 50px auto 0;
+    }
+
+    .photo_goods_creation__items{
+        width: calc((100% - 10px) / 2);
+    }
 }
