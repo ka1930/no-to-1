@@ -840,4 +840,8 @@
         display: block;        
         color: #41587A;
     }
+
+    .photo_goods_creation__items{
+        width: 70%;
+    }
 }
