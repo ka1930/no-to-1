@@ -884,21 +884,22 @@
         width: calc((100% - 10px) / 2);
         margin-top: 30px;
     }
+    .plivacy_wrap{
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     .privacy_ttl{
         font-size: 19px;
         font-weight: bold;
         position: relative;
-        padding-left: 5px;
+        border-left: solid 4px #FF8C71;
+        padding: 5px 0 5px 10px;
     }
 
-    .privacy_ttl::before{
-        content: '';
-        display: inline-block;
-        width: 4px;
-        height: 60px;
-        background-color: #FF8C71;
-        position: absolute;
-        top: -2px;
-        left: -5px;
+    .privacy_adress{
+        background-color: #F5F1EE;
+        padding: 25px 10px;
     }
 }
