@@ -931,4 +931,14 @@
         border-color: #fff;
         transform: rotate(-45deg);
     }
+
+    .plan_wrap,
+    .location_plan_wrap{
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+        -webkit-justify-content: center !important;
+        justify-content: center !important;
+    }
 }
