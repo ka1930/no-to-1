@@ -162,6 +162,10 @@
         text-align: left;
     }
 
+    .u-txtC-L{
+        text-align: center;
+    }
+
     /* width */
     .u-w10 {
         width: 10%;
