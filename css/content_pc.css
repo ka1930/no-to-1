@@ -252,6 +252,13 @@
     }
 
     /* flex */
+    .u-flx {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    }
+
     .u-flxBet {
         display: -webkit-flex !important;
         display: flex !important;
